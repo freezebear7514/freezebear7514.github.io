@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css">
+
+
+</head>
+
+
+<body>
+
+    <!-- 頁首 nav -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container align-items-center col-8">
+            <div class="logo">
+                <img src="./img/01-banner素材/LOGO.svg" alt="" class="">
+            </div>
+            <div class="btn-group ml-5">
+                <a class="btn" href="#Anchor-point1">好評推薦</a>
+                <a class="btn" href="#Anchor-point2">關於韓吉香</a>
+                <a class="btn" href="#Anchor-point3">嚴選食材</a>
+                <a class="btn" href="#Anchor-point4">黃金美味</a>
+                <a class="btn" href="#Anchor-point5">尋找韓吉</a>
+            </div>
+        </div>
+    </nav>
+    <!-- banner -->
+    <div class="banner"></div>
+
+    <hr class="my-5">
+
+    <!-- content -->
+    <!-- 好評推薦 -->
+    <div class="title">好評推薦</div>
+    <div class="swiper-container align-items-center col-8">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./img/02-好評推薦/海報版/Ruby-06.svg" style="width:100%;" class="d-block" alt="...">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/02-好評推薦/海報版/Angle-07.svg" style="width:100%;" class="d-block " alt="...">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/02-好評推薦/海報版/Ruby-06.svg" style="width:100%;" class="d-block" alt="...">
+            </div> 
+            <div class="swiper-slide">
+                <img src="./img/02-好評推薦/海報版/Ruby2-06.svg" style="width:100%;" class="d-block" alt="...">
+            </div> 
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    </div>
+    <hr class="my-5">
+    <!-- 關於韓吉香 -->
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            freeMode: true,
+            pagination: {
+                el: '.swiper-pagination',
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+
+</html>

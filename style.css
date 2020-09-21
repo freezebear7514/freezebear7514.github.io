@@ -1,0 +1,70 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.navbar {
+  width: 100%;
+  background-image: url(./nav-05.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-size: 120%;
+}
+
+.navbar .container {
+  width: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar .container .logo {
+  width: 55%;
+}
+
+.navbar .container .btn-group {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin: auto;
+}
+
+.navbar .container .btn-group .btn {
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 900;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.navbar .container .btn-group .btn:hover {
+  text-decoration: underline;
+}
+
+.banner {
+  background-image: url("https://i.imgur.com/zLxIVoJ.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+}
+
+.title {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 900;
+}
+/*# sourceMappingURL=style.css.map */
