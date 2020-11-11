@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.fullpage {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/博美/博美7.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-attachment: fixed;
+    transition: 1s;
+    background-repeat: no-repeat;
+}
+
+.fullpage:hover{
+    background-size: 120%;
+}
+
+.fullpage:hover .text-box{
+    background-color:rgba(219, 106, 14, 0.884);
+    font-size: 50px;
+}
+
+.mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.text-box {
+    width: 250px;
+    height: 100px;
+    /* background-color: rgba(212, 209, 182,0.6); */
+    font-size: 40px;
+    color: snow;
+    text-align: center;
+    line-height: 100px;
+    position: absolute;
+    left: calc(50% - 100px);
+    top: calc(50% - 50px);
+    transition: 0.5s;
+
+
+
+}
+
+.text-box-color {
+    background-color: rgba(212, 209, 182, 0.5);
+    border: 1px solid  rgb(241, 135, 65);
+}
+
+h1 {
+    text-align: center;
+}
+
+
+
+
+
+.text-area-1 {
+    width: 100%;
+    padding: 30px 50px;
+    background-color: darkgray;
+}
+
+
+
+.onethird-page {
+    width: 100%;
+    height: 400px;
+    background-color: darkkhaki;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#area3 {
+    background-image: url("../img/博美/博美5.jpg");
+}
+
+#area5 {
+    background-image: url("../img/博美/博美6.jpg");
+}
+
+.blackpage {
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-weight: 900;
+    padding: 50px 50px;
+}
+
+.onethird-page .text-box {
+    color: peru;
+    font-weight: 900;
+    background-color:  rgba(28, 231, 211,0.1);
+}
+
+#navbar{
+    width: 100%;
+    height: 80px;
+    background: rgba(28, 231, 211,0.1);
+    /* padding: 7px; */
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+
+.btn{
+
+    width: 120px;
+    height: 60px;
+    background-color: rgba(28, 231, 211,0.3);
+    display: block;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: 900;
+
+    border-radius: 50px;
+    border: 5px solid white;
+   
+    text-decoration: none;
+    color: white;
+    margin-left:  40px;
+    margin-top: 10px;
+    float: left;
+
+    transition: 0.8s;
+}
+
+.btn:hover{
+    width: 180px;
+    height: 70px;
+    font-size: 30px;
+    line-height: 60px;
+    color: rgb(241, 135, 65);
+    border: 5px solid  rgb(241, 135, 65);
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#gotop{
+    width: 70px;
+    height: 70px;
+    background-color: rgba(28, 231, 211,0.2);
+    font-size: 20px;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50px;
+    border: 5px solid white;
+    text-decoration: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+
+    transition: 1s;
+}
+
+#gotop:hover{
+    width: 80px;
+    height: 80px;
+    font-size: 25px;
+    line-height: 68px;
+    color: yellow;
+    border: 6px solid yellow;
+    
+
+
+}
+
+#gotop:active{
+    width: 90px;
+    height: 90px;
+    font-size: 30px;
+    line-height: 78px;
+    color: sienna;
+    border: 6px solid sienna;
+}
+
+/* .goA{
+    width: 80px;
+    height: 400px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+    padding-top: 300px;
+
+}
+
+.goA:hover{
+    padding-top: 0;
+    transition: 2s
+} */

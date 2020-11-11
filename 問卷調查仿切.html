@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: '微軟正黑體';
+        }
+
+        h2 {
+            margin: 0;
+        }
+
+        .Questionnaire {
+            width: 50%;
+            margin: auto;
+            border: 1px solid cadetblue;
+        }
+
+        .title {
+            width: 100%;
+            background-color: cadetblue;
+            color: white;
+            text-align: center;
+            margin: auto
+        }
+
+        form {
+            width: 256px;
+            margin: auto
+        }
+
+
+
+        h4 {
+            color: chocolate;
+            text-align: center;
+            margin: 0px;
+        }
+
+
+        label {
+            font-size: 16px;
+            display: block;
+            padding: 5px 0;
+            font-weight: bold;
+        }
+
+
+        input,
+        select,
+        textarea {
+
+            border-radius: 5px;
+            border-color: cadetblue;
+            border-width: 2px;
+        }
+
+        select[name="year"],
+        select[name="mooth"],
+        select[name="day"] {
+            width: 32.2%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type='text'],
+        select[name="gender"],
+        input[type='email'] {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .radio-group {
+            padding-bottom: 15px;
+            padding-left: 30px;
+        }
+
+        .radio-group:last-child {
+            padding-bottom: 0;
+        }
+
+        .checkbox{
+            display: flex;
+            flex-wrap:wrap ;
+        }
+
+        .checkbox-group{
+            width: 50% ;
+            padding-bottom: 15px;
+        }
+
+        .checkbox-group:last-child{
+            padding-bottom: 0;
+        }
+
+        .content .text {
+            padding: 30px 0;
+            text-align: center;
+            color: rgba(128, 128, 128, 1);
+        }
+
+        button {
+            background-color: cadetblue;
+            border-color: cadetblue;
+            font-weight: bold;
+            color: white;
+        }
+
+        .gender_select {
+            border: 1px solid black;
+            border-radius: 5px;
+            font-size: 14px;
+            position: relative;
+        }
+
+        .gender_select * {
+            box-sizing: border-box;
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+
+        .select_input {
+            color: rgba(128,128,128,1);
+            background-image: url('./arrow.jpg');
+            background-position: right;
+            background-size: 50%;
+            background-repeat: no-repeat;
+        }
+
+        .select_input.selected {
+            color: black;
+        }
+
+        .select_options {
+            width:100%;
+            padding:0;
+
+            position:absolute;
+            background-color: white;
+        }
+
+        .select_options.active {
+            border:1px solid black;
+            
+        }
+
+        .select_option {
+            width:100%;
+            display:none;
+        }
+
+        .select_option.active{
+            display:block;
+        }
+
+        .select_option:hover {
+            color: white;
+            background: black;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="Questionnaire">
+        <div class="title">
+            <h2>您的問卷調查</h2>
+        </div>
+        <div class="content">
+            <h4>❤這是一份韓吉香黃金薯問卷❤</h4>
+            <h4>❤請選擇你最愛的餐點❤</h4>
+
+            <form action="">
+                <div class="form-group">
+                    <label for="#name">姓名 | Name</label>
+                    <input id="name" type="text" name="name" placeholder="您的姓名">
+                </div>
+                <div class="form-group">
+                    <label for="#gender">性別 | Gender</label>
+                    <div class="gender_select">
+                        <div class="select_input">您的性別</div>
+                        <div class="select_options">
+                            <div class="select_option" data-gender="male">男性 | Male</div>
+                            <div class="select_option" data-gender="femal">女性 | Female</div>
+                            <div class="select_option" data-gender="others">其他 | Others</div>
+                        </div>
+                    </div>
+                    <input id="gender" type="hidden" name="gender" value="哈囉">
+                    <!-- <select id="gender" name="gender">
+                        <option value="" hidden selected>選擇您的性別</option>
+                        <option value="">男性 | Male</option>
+                        <option value="">女性 | Female</option>
+                        <option value="">其他 | Other</option>
+                    </select> -->
+                </div>
+                <div class="form-group">
+                    <label for="#name">出生年月日 | Birthday</label>
+                    <select name="year" id="year">
+                        <option value="">年</option>
+                    </select>
+                    <select name="mooth" id="mooth">
+                        <option value="">月</option>
+                    </select>
+                    <select name="day" id="day">
+                        <option value="">日</option>
+                    </select>
+
+                </div>
+                <div class="form-group">
+                    <label for="#phone">電話 | Phone</label>
+                    <input id="phone" type="text" name="phone" placeholder="您的電話">
+                </div>
+                <div class="form-group">
+                    <label for="#email">電子信箱 | Email</label>
+                    <input id="email" type="email" name="email" placeholder="您的信箱">
+                </div>
+                <div class="form-group">
+                    <label for="#weight">餐點份量 | Weight</label>
+                    <div class="radio-group">
+                        <input id="weight" type="radio" name="weight">
+                        <span>大份</span>
+                    </div>
+                    <div class="radio-group">
+                        <input id="weight" type="radio" name="weight">
+                        <span>小份</span>
+                    </div>
+                    <div class="radio-group">
+                        <input id="weight" type="radio" name="weight">
+                        <span>綜合</span>
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <label for="#food">美食 | Food</label>
+                    <div class="checkbox">
+                        <div class="checkbox-group">
+                            <input id="food" type="checkbox" name="food">
+                            <span>地瓜薯</span>
+                        </div>
+                        <div class="checkbox-group">
+                            <input id="food" type="checkbox" name="food">
+                            <span>馬鈴薯</span>
+                        </div>
+                        <div class="checkbox-group">
+                            <input id="food" type="checkbox" name="food">
+                            <span>杏鮑菇</span>
+                        </div>
+                        <div class="checkbox-group">
+                            <input id="food" type="checkbox" name="food">
+
+                            <span>芋頭</span>
+                        </div>
+                        <div class="checkbox-group">
+                            <input id="food" type="checkbox" name="food">
+
+                            <span>玉米筍</span>
+                        </div>
+                        <div class="checkbox-group">
+                            <input id="food" type="checkbox" name="food">
+
+                            <span>南瓜</span>
+                        </div>
+                        <div class="checkbox-group">
+                            <input id="food" type="checkbox" name="food">
+
+                            <span>香菇</span>
+                        </div>
+                        <div class="checkbox-group">
+                            <input id="food" type="checkbox" name="food">
+
+                            <span>金針菇</span>
+                        </div>
+                        <div class="checkbox-group">
+                            <input id="food" type="checkbox" name="food">
+                            <span>蘿蔔糕</span>
+                        </div>
+                        <div class="checkbox-group">
+                            <input id="food" type="checkbox" name="food">
+                            <span>板豆腐</span>
+                        </div>
+                        <div class="checkbox-group">
+                            <input id="food" type="checkbox" name="food">
+                            <span>其他</span>
+                        </div>
+                        <div class="checkbox-group">
+                            <input id="food-other" type="text" name="food-other" placeholder="其他美食">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="#reply">意見連言 | Reply</label>
+                    <small>滿意這份問卷嗎?說說你想說的話吧!</small>
+                    <textarea placeholder="您的回覆" id="reply" name="reply" cols="30" rows="10">
+                    </textarea>
+                </div>
+                <button type="submit">送出資料</button>
+                <button type="reset">重新填寫</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <script>
+        var day = document.getElementById('day')
+        for (var i = 1; i < 32; i++) {
+            day.innerHTML += `<option value="${i}">${i} </option>`
+        }
+
+        var mooth = document.getElementById('mooth')
+        for (var i = 1; i < 13; i++) {
+            mooth.innerHTML += `<option value="${i}">${i} </option>`
+        }
+
+        var year = document.getElementById('year')
+        for (var i = 1900; i < 2021; i++) {
+            year.innerHTML += `<option value="${i}">${i} </option>`
+        }
+
+        $('.select_input').click(function(){
+            if(!$('.select_option').hasClass('active')){
+                $('.select_option').addClass('active');
+                $('.select_options').addClass('active');
+            }else{
+                $('.select_option').removeClass('active');
+                $('.select_options').removeClass('active');
+            }
+        })
+
+        $('.select_option').click(function(){
+
+$('.select_input').text($(this).text()); //將option的內容放進input中
+$('.select_input').addClass('selected'); //改變input框中的顏色
+
+$('.select_option').removeClass('active'); //收合選單
+$('.select_options').removeClass('active'); //收合選單
+$('#gender').val($(this).data('gender'))
+})
+
+    </script>
+
+</body>
+
+</html>
