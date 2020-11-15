@@ -113,13 +113,16 @@ header {
         a {
             position: relative;
             display: inline-block;
-            background: #fff;
+            background: #a58cd8;
             color: #111;
             padding: 15px 25px;
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 1px;
             font-weight: 500;
+            @media (max-width: 991px){
+                margin-bottom: 10%;
+            }
         }
     }
     .imgbox {
