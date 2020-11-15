@@ -52,7 +52,7 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    @media (max-width:991px){
+    @media (max-width: 991px) {
         padding: 150ox 50px 0;
         flex-direction: column;
         overflow: hidden;
@@ -68,14 +68,14 @@ header {
         transform-origin: top;
         transform: skewX(-20deg);
         z-index: 10;
-        @media (max-width:991px){
+        @media (max-width: 991px) {
             width: 300px;
-           transform: skewX(-25deg) translateX(50%);
+            transform: skewX(-25deg) translateX(50%);
         }
     }
 
-    video{
-        position:absolute;
+    video {
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
@@ -89,8 +89,14 @@ header {
         position: relative;
         max-width: 600px;
         z-index: 3;
-        @media (max-width:991px){
-            max-width: 100%;         
+        @media (max-width: 991px) {
+            max-width: 100%;
+        }
+        .title {
+            font-family: "Poppins", Arial, sans-serif;
+            font-weight: 700;
+            font-size: 30px;
+            color: #8d0004;
         }
         h2 {
             color: #fff;
@@ -141,9 +147,9 @@ header {
         justify-content: center;
         align-items: center;
         z-index: 10;
-        @media (max-width:991px){
+        @media (max-width: 991px) {
             z-index: 100;
-            left:initial;
+            left: initial;
             right: 20px;
             flex-direction: column;
         }
@@ -152,19 +158,18 @@ header {
             .social-icon {
                 display: inline-block;
                 margin-right: 15px;
-                &:hover  .fa-circle{
-                    color:#8f0105;
+                &:hover .fa-circle {
+                    color: #8f0105;
                 }
-                @media (max-width:991px){
+                @media (max-width: 991px) {
                     padding-bottom: 10px;
                 }
-                span{
-                    .fa-circle{
+                span {
+                    .fa-circle {
                         transition: 0.5s;
                         color: #330708;
                     }
                 }
-
             }
         }
     }
@@ -183,26 +188,10 @@ nav {
     height: 60px;
 }
 
-// .title {
-//     text-align: center;
-//     font-family: "Poppins", Arial, sans-serif;
-//     font-size: 18px;
-//     line-height: 1.8;
-//     font-weight: 400;
-//     color: #8c8c8c;
-// }
 
-.title-2 {
-    // text-align: center;
-    font-family: "Poppins", Arial, sans-serif;
-    font-weight: 700;
-    font-size: 30px;
-    color:  #330708;
-}
 
 /* 漢堡條 */
 .menu-wrap {
     @include hamburger();
     @include burgerAtive();
 }
-
