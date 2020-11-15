@@ -15,11 +15,214 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  line-height: 1.4;
-  background-image: url(./img/20215.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px 100px;
+  z-index: 1000;
+}
+
+header .logo {
+  position: relative;
+  font-size: 2em;
+  color: #8f0105;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+header .logo span {
+  color: #fff;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: #111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 991px) {
+  .banner {
+    padding: 150ox 50px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: hidden;
+  }
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 400px;
+  height: 100%;
+  background: rgba(143, 1, 5, 0.5);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transform: skewX(-20deg);
+          transform: skewX(-20deg);
+  z-index: 10;
+}
+
+@media (max-width: 991px) {
+  .banner::before {
+    width: 300px;
+    -webkit-transform: skewX(-25deg) translateX(50%);
+            transform: skewX(-25deg) translateX(50%);
+  }
+}
+
+.banner video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.banner .textbox {
+  position: relative;
+  max-width: 600px;
+  z-index: 3;
+}
+
+@media (max-width: 991px) {
+  .banner .textbox {
+    max-width: 100%;
+  }
+}
+
+.banner .textbox h2 {
+  color: #fff;
+  font-size: 3em;
+}
+
+.banner .textbox p {
+  color: #fff;
+  font-size: 1.1em;
+  margin: 5px 0 25px;
+}
+
+.banner .textbox a {
+  position: relative;
+  display: inline-block;
+  background: #fff;
+  color: #111;
+  padding: 15px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.banner .imgbox {
+  position: relative;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  z-index: 3;
+}
+
+.banner .imgbox img {
+  border: 6px solid #fff;
+  position: absolute;
+  bottom: 15%;
+  height: 70%;
+  z-index: 1111;
+  border-radius: 0%;
+}
+
+.banner .sci {
+  position: absolute;
+  bottom: 20px;
+  right: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10;
+}
+
+@media (max-width: 991px) {
+  .banner .sci {
+    z-index: 100;
+    left: initial;
+    right: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.banner .sci li {
+  list-style: none;
+}
+
+.banner .sci li .social-icon {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.banner .sci li .social-icon:hover .fa-circle {
+  color: #8f0105;
+}
+
+@media (max-width: 991px) {
+  .banner .sci li .social-icon {
+    padding-bottom: 10px;
+  }
+}
+
+.banner .sci li .social-icon span .fa-circle {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #330708;
 }
 
 .progress {
@@ -44,10 +247,10 @@ nav {
 }
 
 .title-2 {
-  text-align: center;
   font-family: "Poppins", Arial, sans-serif;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 30px;
+  color: #330708;
 }
 
 /* 漢堡條 */
