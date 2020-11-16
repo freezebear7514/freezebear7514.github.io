@@ -115,7 +115,7 @@ header .logo span {
 .banner .textbox {
   position: relative;
   max-width: 600px;
-  z-index: 3;
+  z-index: 12;
 }
 
 @media (max-width: 991px) {
@@ -128,7 +128,7 @@ header .logo span {
   font-family: "Poppins", Arial, sans-serif;
   font-weight: 700;
   font-size: 30px;
-  color: #8d0004;
+  color: #8c8c8c;
 }
 
 @media (max-width: 991px) {
@@ -138,26 +138,29 @@ header .logo span {
 }
 
 .banner .textbox h2 {
-  color: #fff;
+  color: #8d0004;
   font-size: 3em;
 }
 
 .banner .textbox p {
   color: #fff;
   font-size: 1.1em;
-  margin: 5px 0 25px;
 }
 
 .banner .textbox a {
   position: relative;
   display: inline-block;
-  background: #a58cd8;
-  color: #111;
-  padding: 15px 25px;
+  background: #8f0105;
+  color: #fff;
+  padding: 5px 20px;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 500;
+  opacity: 0.6;
+  z-index: 50;
+}
+
+.banner .textbox a:hover {
+  opacity: 1;
 }
 
 @media (max-width: 991px) {
