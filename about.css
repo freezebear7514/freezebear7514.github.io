@@ -16,7 +16,7 @@
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1.4;
-  background-image: url(./img/20215.jpg);
+  background-image: url(./img/bigbg.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -54,8 +54,86 @@ header .logo span {
   color: #fff;
 }
 
-.sci {
+.container h2 {
+  text-align: center;
+  color: #fff;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.container h2::after {
+  content: "ABOUT";
   position: absolute;
+  font-size: 150px;
+  top: -70px;
+  left: 20px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.08);
+  text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+  .container h2::after {
+    font-size: 120px;
+    top: -60px;
+  }
+}
+
+.container .imgbox {
+  z-index: 3;
+  margin: auto;
+}
+
+.container .imgbox img {
+  margin: auto;
+  border: 6px solid #fff;
+  width: 80%;
+  z-index: 1111;
+  border-radius: 0%;
+}
+
+.container .textbox {
+  margin-top: 60px;
+}
+
+.container .textbox h4 {
+  color: #fff;
+}
+
+.container .textbox h4 span {
+  font-size: 18px;
+  color: #8c8c8c;
+}
+
+.container .textbox a {
+  position: relative;
+  display: inline-block;
+  background: #fc3a3c;
+  color: #111;
+  padding: 15px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.container .title-2 {
+  margin: 40px;
+  font-size: 40px;
+  color: #8c8c8c;
+}
+
+.container .school {
+  float: left;
+  color: #fff;
+}
+
+.container p {
+  text-align: right;
+  font-size: 18px;
+  color: #fff;
+}
+
+.sci {
+  position: fixed;
   bottom: 20px;
   right: 100px;
   display: -webkit-box;
@@ -104,7 +182,7 @@ header .logo span {
 .sci li .social-icon span .fa-circle {
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  color: #fc3a3c;
+  color: #330708;
 }
 
 .progress {

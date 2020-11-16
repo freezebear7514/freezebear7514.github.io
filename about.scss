@@ -50,40 +50,94 @@ header {
     }
 }
 
-.sci {
-    position: absolute;
-    bottom: 20px;
-    right: 100px;
-    // letter-spacing: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-    @media (max-width: 991px) {
-        z-index: 100;
-        left: initial;
-        right: 20px;
-        flex-direction: column;
-    }
-    li {
-        list-style: none;
-        .social-icon {
-            display: inline-block;
-            margin-right: 15px;
-            &:hover .fa-circle {
-                color: #8f0105;
-            }
-            @media (max-width: 991px) {
-                padding-bottom: 10px;
-            }
-            span {
-                .fa-circle {
-                    transition: 0.5s;
-                    color:  #330708;
-                }
+// 履歷內容
+.container {
+    h2 {
+        text-align: center;
+        color: #fff;
+        position: relative;
+        margin-bottom: 100px;
+        &::after {
+            content: "ABOUT";
+            position: absolute;
+            font-size: 150px;
+            top: -70px;
+            left: 20px;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.08);
+            text-transform: uppercase;
+            @media (max-width: 800px) {
+                font-size: 120px;
+                top: -60px;
             }
         }
     }
+
+    .imgbox {
+        // position: relative;
+        // height: 100vh;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        z-index: 3;
+        margin: auto;
+        img {
+            margin: auto;
+            border: 6px solid#fff;
+            // position: absolute;
+            // bottom: 15%;
+            width: 80%;
+            // height: 50%;
+            z-index: 1111;
+            border-radius: 0%;
+            // @media (max-width: 600px) {
+            //     width: 100%;
+            // }
+        }
+    }
+    .textbox {
+        margin-top: 60px;
+        h4 {
+            color: #fff;
+            span {
+                font-size: 18px;
+                color: #8c8c8c;
+            }
+        }
+        a {
+            position: relative;
+            display: inline-block;
+            background: #fc3a3c;
+            color: #111;
+            padding: 15px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            // font-weight: 500;
+        }
+    }
+
+    .title-2 {
+        margin:40px;
+        // text-align: center;
+        font-size: 40px;
+        color:#8c8c8c;
+    }
+
+    .school {
+        float: left;
+        color: #fff;
+    }
+    p{
+        text-align: right;
+        font-size: 18px;
+        color: #fff;
+    }
+    
+}
+
+// 社群連結
+.sci {
+    @include sci();
 }
 
 // progress line
@@ -104,5 +158,3 @@ nav {
     @include hamburger();
     @include burgerAtive();
 }
-
-

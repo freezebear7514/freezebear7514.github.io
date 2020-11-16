@@ -1,3 +1,4 @@
+// 漢堡條
 @mixin hamburger() {
     position: fixed;
     top: 0;
@@ -119,6 +120,7 @@
     }
 }
 
+// 展開漢堡條
 @mixin burgerAtive() {
     .toggler.active ~ .hamburger > div {
         transform: rotate(135deg);
@@ -152,6 +154,7 @@
     }
 }
 
+// 作品卡片
 @mixin card() {
     position: relative;
     width: 300px;
@@ -168,7 +171,7 @@
     background-size: 105%;
     transition: 1s;
     opacity: 0.6;
-    &:hover{
+    &:hover {
         background-size: 120%;
         opacity: 1;
     }
@@ -290,5 +293,42 @@
         background: linear-gradient(to top, transparent, #c40e0d);
         animation: animate4 2s linear infinite;
         animation-delay: 1s;
+    }
+}
+
+// 社團連結
+@mixin sci() {
+    position: fixed;
+    bottom: 20px;
+    right: 100px;
+    // letter-spacing: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    @media (max-width: 991px) {
+        z-index: 100;
+        left: initial;
+        right: 20px;
+        flex-direction: column;
+    }
+    li {
+        list-style: none;
+        .social-icon {
+            display: inline-block;
+            margin-right: 15px;
+            &:hover .fa-circle {
+                color: #8f0105;
+            }
+            @media (max-width: 991px) {
+                padding-bottom: 10px;
+            }
+            span {
+                .fa-circle {
+                    transition: 0.5s;
+                    color: #330708;
+                }
+            }
+        }
     }
 }
