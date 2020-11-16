@@ -52,6 +52,9 @@ header {
 
 // 履歷內容
 .container {
+    // .row{
+    //     height: 500px;
+    // }
     h2 {
         text-align: center;
         color: #fff;
@@ -74,13 +77,16 @@ header {
     }
 
     .imgbox {
-        // position: relative;
-        // height: 100vh;
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
+        position: relative;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         z-index: 3;
         margin: auto;
+        @media (max-width: 991px) {
+            // margin-top: 100px;
+        }
         img {
             margin: auto;
             border: 6px solid#fff;
@@ -97,48 +103,99 @@ header {
     }
     .textbox {
         margin-top: 60px;
-        h4 {
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        h3 {
             color: #fff;
+            @media (max-width: 991px) {
+                font-size: 25px;
+            }
             span {
-                font-size: 18px;
-                color: #8c8c8c;
+                font-size: 20px;
+                color: #726d6d;
+                @media (max-width: 991px) {
+                    font-size: 18px;
+                }
             }
         }
-        a {
+        .resume {
             position: relative;
             display: inline-block;
-            background: #fc3a3c;
-            color: #111;
+            background: #8f0105;
+            color: #fff;
             padding: 15px 20px;
             text-decoration: none;
             text-transform: uppercase;
-            // font-weight: 500;
+            opacity: 0.6;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        .sci {
+            margin-top: 20px;
+            display: flex;
+            li {
+                list-style: none;
+                .social-icon {
+                    display: inline-block;
+                    margin-right: 5px;
+                    background: none;
+                    &:hover .fa-circle {
+                        // color: #8f0105;
+                        // color: #330708;
+                        opacity: 1;
+                    }
+                    // @media (max-width: 991px) {
+                    //     padding-bottom: 10px;
+                    // }
+                    span {
+                        .fa-circle {
+                            transition: 0.5s;
+                            color: #8f0105;
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
         }
     }
 
     .title-2 {
-        margin:40px;
-        // text-align: center;
+        width: 230px;
+        border: 1px solid #8f0105;
+        margin: 30px 0px;
+        text-align: center;
         font-size: 40px;
-        color:#8c8c8c;
+        color: #8c8c8c;
     }
 
     .school {
         float: left;
         color: #fff;
     }
-    p{
+    p {
         text-align: right;
         font-size: 18px;
         color: #fff;
     }
-    
+    .skill {
+        .fab {
+            color: #fff;
+            margin: 0 10px 20px 0;
+            opacity: 0.8;
+            span{
+                font-size: 30px;
+                color:#fff ;
+            }
+        }
+    }
 }
 
 // 社群連結
-.sci {
-    @include sci();
-}
+// .sci {
+//     @include sci();
+// }
 
 // progress line
 .progress {
